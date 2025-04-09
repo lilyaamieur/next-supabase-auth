@@ -60,7 +60,7 @@ const RegisterForm = () => {
         <InputForm
           label="Email"
           name="email"
-          placeholder="hello@sarathadhi.com"
+          placeholder="smth@mobilis.dz"
           description=""
           required
         />

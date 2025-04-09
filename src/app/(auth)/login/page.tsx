@@ -6,35 +6,36 @@ import LoginForm from "./_components/login-form";
 
 const LoginPage = () => {
   return (
-    <section className="container flex h-screen flex-col items-center justify-center">
-      <Button variant="outline" asChild>
-        <Link href="/" className={cn("absolute left-4 top-4")}>
-          <ChevronLeftCircle className="mr-2 h-4 w-4" />
-          Back
-        </Link>
-      </Button>
+    <section className="container flex h-screen items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300 p-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 space-y-6 transform transition-transform duration-300 hover:scale-105">
+        <Button variant="outline" asChild>
+          <Link href="/" className={cn("absolute left-4 top-4 flex items-center text-gray-600 dark:text-gray-200")}>
+            <ChevronLeftCircle className="mr-2 h-5 w-5" />
+            Back
+          </Link>
+        </Button>
 
-      <div className="mx-auto max-w-80 flex flex-col justify-center space-y-6 ">
-        <div className="flex flex-col space-y-2 text-center">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Welcome back
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
+            Welcome Back
           </h1>
-
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-gray-600 dark:text-gray-300">
             Enter your email and password to sign in to your account
           </p>
         </div>
 
         <LoginForm />
 
-        <p className="px-8 text-center text-sm text-muted-foreground">
-          <Link
-            href="/register"
-            className="hover:text-brand underline underline-offset-4"
-          >
-            Don&apos;t have an account? Register
-          </Link>
-        </p>
+        <div className="text-center">
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            <Link
+              href="/register"
+              className="text-green-600 dark:text-green-600 hover:text-green-700 dark:hover:text-green-500 font-semibold underline"
+            >
+              Don&apos;t have an account? Register
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );
